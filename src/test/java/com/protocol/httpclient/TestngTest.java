@@ -1,5 +1,6 @@
 package com.protocol.httpclient;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -33,6 +34,7 @@ public class TestngTest {
 			
 			Assert.assertEquals(String.valueOf(rsp.getStatusLine().getStatusCode()), rspCode);
 			if(null != expected && expected.trim().length() > 0){
+				System.out.println("=======>" + EntityUtils.toString(rsp.getEntity()));
 				AssertResult result = Asserts.assertJson(EntityUtils.toString(rsp.getEntity()), expected);
 				Assert.assertTrue(result.isSucc(), result.getMessage());
 			}
@@ -47,13 +49,31 @@ public class TestngTest {
     }
 	
 	public static void main(String[] args) {
-		List<Boolean> resultList = new ArrayList<Boolean>();
-		resultList.add(true);
-		resultList.add(true);
-		resultList.add(false);
-		resultList.add(true);
-		resultList.add(true);
-		System.out.println(resultList.contains(Boolean.FALSE) ? false : true);
+//		List<Boolean> resultList = new ArrayList<Boolean>();
+//		resultList.add(true);
+//		resultList.add(true);
+//		resultList.add(false);
+//		resultList.add(true);
+//		resultList.add(true);
+//		System.out.println(resultList.contains(Boolean.FALSE) ? false : true);
+		
+		File file = new File("D:/work/workspace/JavaNetCap2/target");
+		  deleteAll(file);
+//		System.out.println(Integer.MAX_VALUE);
+	}
+	
+	// 递归删除指定路径下的所有文件
+	public static void deleteAll(File file) {
+		if (file.isFile() || file.list().length == 0) {
+			file.delete();
+		} else {
+			File[] files = file.listFiles();
+			for (File f : files) {
+				deleteAll(f);// 递归删除每一个文件
+				f.delete();// 删除该文件夹
+				System.out.println(f.getAbsolutePath());
+			}
+		}
 	}
 	
 }

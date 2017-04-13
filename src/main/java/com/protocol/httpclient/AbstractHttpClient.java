@@ -3,6 +3,7 @@ package com.protocol.httpclient;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+
 import org.apache.http.Header;
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
@@ -22,6 +23,7 @@ import org.apache.http.message.HeaderGroup;
 import org.apache.http.util.Args;
 import org.apache.http.util.EntityUtils;
 import org.apache.http.util.TextUtils;
+import org.json.JSONObject;
 
 import com.CommonConsts;
 
@@ -145,10 +147,9 @@ public abstract class AbstractHttpClient {
 	public HttpEntity getHttpEntity(String params, String separator){
 		if(TextUtils.isEmpty(params) && TextUtils.isBlank(params)) return null;
 		List<NameValuePair> nvps = new ArrayList<NameValuePair>();
-		for(String param:params.split(separator)){
-			if(TextUtils.isEmpty(param.trim())) continue;
-			String name = param.split("=")[0].trim();
-			String value = param.split("=")[1].trim();
+		JSONObject json = new JSONObject(params);
+		for(String name : json.keySet()){
+			String value = String.valueOf(json.get(name));
 			nvps.add(new BasicNameValuePair(name, value));
 		}
         return new UrlEncodedFormEntity(nvps, contentType.getCharset());  
@@ -202,6 +203,20 @@ public abstract class AbstractHttpClient {
 	 */
 	public CookieStore getCookieStore(){
 		return cookieStore;
+	}
+	
+	/**
+	 * 
+	 * @param headers
+	 * @return
+	 */
+	public String convertHeards2Json(Header[] headers){
+		if(null == headers) return null;
+		JSONObject json = new JSONObject();
+		for(Header head : headers){
+			json.put(head.getName(), head.getValue());
+		}
+		return json.toString();
 	}
 	
 //	public static void main(String[] args) {

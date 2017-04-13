@@ -4,10 +4,14 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
 public class Asserts {
+	
+	private static Log LOGGER = LogFactory.getLog(Asserts.class);
 
 	/**
 	 * 判断期望的json串中的值与实际json串中对应的值相等
@@ -37,7 +41,8 @@ public class Asserts {
 					}
 				}
 			} else {
-				String message = "expected:" + expValue + ", actual:" + actValue;
+				String message = "[" + name + "] expected:" + expValue + ", actual:" + actValue;
+				LOGGER.debug("---------->" + message);
 				if(null == expValue)
 					resultList.add(new AssertResult(null == actValue, message));
 				else{
