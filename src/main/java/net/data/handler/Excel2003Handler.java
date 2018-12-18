@@ -157,6 +157,6 @@ public class Excel2003Handler {
 	}
 	
 //	public static void main(String[] args) {
-//		readExcel("D:/work/workspace/server-ats/src/main/resources/com/cmcc/ats/server/handle/test.xls",null);
+//		readExcel("D:/work/workspace/server-ats/src/main/resources/net/andy/ats/server/handle/test.xls",null);
 //	}
 }

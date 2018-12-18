@@ -35,9 +35,9 @@ public class HttpClientImpl extends AbstractHttpClient {
 	
 	/**
 	 * 
-	 * @param uri  请求地址，如：http://172.23.23.97/ems_cmcc/new/getEnterprise
-	 * @param headers  请求头信息（请求头之间以\r\n分隔），如：Connection: keep-alive\r\nContent-Type: application/x-www-form-urlencoded\r\nContent-Length: 52\r\nHost: 172.23.23.97\r\nUser-Agent: Apache-HttpClient/4.5.2 (Java/1.8.0_111)
-	 * @param params   请求参数（参数之间以&分隔），如：loginName=18867103603&loginPassword=123456789&type=1
+	 * @param uri  请求地址，如：http://10.10.10.10/ems/new/getEnterprise
+	 * @param headers  请求头信息（请求头之间以\r\n分隔），如：Connection: keep-alive\r\nContent-Type: application/x-www-form-urlencoded\r\nContent-Length: 52\r\nHost: 10.10.10.10\r\nUser-Agent: Apache-HttpClient/4.5.2 (Java/1.8.0_111)
+	 * @param params   请求参数（参数之间以&分隔），如：loginName=123&loginPassword=123456789&type=1
 	 */
 	public HttpClientImpl(String uri, String headers, String params){
 		this.uri = uri;
@@ -47,9 +47,9 @@ public class HttpClientImpl extends AbstractHttpClient {
 	
 	/**
 	 * 
-	 * @param uri  请求地址，如：http://172.23.23.97/ems_cmcc/new/getEnterprise
-	 * @param headers  请求头信息（请求头之间以\r\n分隔），如：Connection: keep-alive\r\nContent-Type: application/x-www-form-urlencoded\r\nContent-Length: 52\r\nHost: 172.23.23.97\r\nUser-Agent: Apache-HttpClient/4.5.2 (Java/1.8.0_111)
-	 * @param params   请求参数（参数之间以&分隔），如：loginName=18867103603&loginPassword=123456789&type=1
+	 * @param uri  请求地址，如：http://10.10.10.10/ems/new/getEnterprise
+	 * @param headers  请求头信息（请求头之间以\r\n分隔），如：Connection: keep-alive\r\nContent-Type: application/x-www-form-urlencoded\r\nContent-Length: 52\r\nHost: 10.10.10.10\r\nUser-Agent: Apache-HttpClient/4.5.2 (Java/1.8.0_111)
+	 * @param params   请求参数（参数之间以&分隔），如：loginName=123&loginPassword=123456789&type=1
 	 * @param cookieStore
 	 */
 	public HttpClientImpl(String uri, String headers, String params, CookieStore cookieStore){
