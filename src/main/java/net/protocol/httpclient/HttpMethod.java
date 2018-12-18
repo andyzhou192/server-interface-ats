@@ -1,4 +1,4 @@
-package com.protocol.httpclient;
+package net.protocol.httpclient;
 
 public enum HttpMethod {
 	PUT("PUT", "功能跟post相似，用来将信息放到请求的URL（URI）上，put方法是幂等方法， post非幂等方法，put在请求时容易造成数据冗余， 而post则不然。"), 

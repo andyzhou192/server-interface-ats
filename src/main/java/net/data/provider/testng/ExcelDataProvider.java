@@ -1,4 +1,4 @@
-package com.data.provider.testng;
+package net.data.provider.testng;
 
 import java.io.File;
 import java.lang.reflect.Method;
@@ -9,7 +9,7 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.testng.annotations.DataProvider;
 
-import com.data.handler.Excel2003Handler;
+import net.data.handler.Excel2003Handler;
 
 /**
  * Data Driver

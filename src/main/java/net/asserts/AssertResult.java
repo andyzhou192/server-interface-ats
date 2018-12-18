@@ -1,4 +1,4 @@
-package com.asserts;
+package net.asserts;
 
 public class AssertResult {
 	

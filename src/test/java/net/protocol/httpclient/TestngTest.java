@@ -1,4 +1,4 @@
-package com.protocol.httpclient;
+package net.protocol.httpclient;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -11,10 +11,10 @@ import org.apache.http.util.EntityUtils;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import com.asserts.AssertResult;
-import com.asserts.Asserts;
-import com.data.provider.testng.ExcelDataProvider;
-import com.protocol.httpclient.HttpClientImpl;
+import net.asserts.AssertResult;
+import net.asserts.Asserts;
+import net.data.provider.testng.ExcelDataProvider;
+import net.protocol.httpclient.HttpClientImpl;
 
 /**
  * 

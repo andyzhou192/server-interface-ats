@@ -1,4 +1,4 @@
-package com.asserts;
+package net.asserts;
 
 import java.util.ArrayList;
 import java.util.Iterator;

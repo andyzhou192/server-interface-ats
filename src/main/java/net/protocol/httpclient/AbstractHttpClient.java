@@ -1,4 +1,4 @@
-package com.protocol.httpclient;
+package net.protocol.httpclient;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -25,7 +25,7 @@ import org.apache.http.util.EntityUtils;
 import org.apache.http.util.TextUtils;
 import org.json.JSONObject;
 
-import com.CommonConsts;
+import net.CommonConsts;
 
 public abstract class AbstractHttpClient {
 	

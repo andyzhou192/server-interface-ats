@@ -1,4 +1,4 @@
-package com.data.handler;
+package net.data.handler;
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -17,7 +17,7 @@ import jxl.read.biff.BiffException;
 
 /**
  * excel2003处理
- * @author zhouyelin@chinamobile.com
+ * @author sifuma@163.com
  *
  */
 public class Excel2003Handler {

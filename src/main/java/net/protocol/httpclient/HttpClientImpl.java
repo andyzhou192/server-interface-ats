@@ -1,4 +1,4 @@
-package com.protocol.httpclient;
+package net.protocol.httpclient;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -23,7 +23,7 @@ import org.apache.http.entity.mime.content.FileBody;
 import org.apache.http.entity.mime.content.StringBody;
 import org.apache.http.util.TextUtils;
 
-import com.CommonConsts;
+import net.CommonConsts;
 
 public class HttpClientImpl extends AbstractHttpClient {
 	private static Log LOGGER = LogFactory.getLog(HttpClientImpl.class);
